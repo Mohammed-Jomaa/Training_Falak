@@ -1,0 +1,88 @@
+2024-06-05 06:14:15 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BOOKS_AUTHORS: ""BA_ID"" BIGINT DEFAULT NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"" NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"")"; SQL statement:
+INSERT INTO "PUBLIC"."BOOKS_AUTHORS"("BA_ID","AUTHOR_ID","BOOK_ID")VALUES(?,?,?) [22018-200]
+2024-06-05 06:14:15 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BOOKS_AUTHORS: ""BA_ID"" BIGINT DEFAULT NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"" NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"")"; SQL statement:
+INSERT INTO "PUBLIC"."BOOKS_AUTHORS"("BA_ID","AUTHOR_ID","BOOK_ID")VALUES(?,?,?) [22018-200]
+2024-06-05 06:15:07 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM BOOKS_AUTHORS BOOK BOOK[*]"; SQL statement:
+SELECT * FROM BOOKS_AUTHORS BOOK BOOK [42000-200]
+2024-06-05 06:15:21 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM BOOK BOOKS_AUTHORS AUTHOR[*]"; SQL statement:
+SELECT * FROM BOOK BOOKS_AUTHORS AUTHOR [42000-200]
+2024-06-06 13:05:43 jdbc[15]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 19 more
+2024-06-10 16:05:10 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM BOOK BOOKS_AUTHORS BOOKS_AUTHORS[*]"; SQL statement:
+SELECT * FROM BOOK BOOKS_AUTHORS BOOKS_AUTHORS [42000-200]
+2024-06-10 16:11:32 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BOOKS_AUTHORS: ""BA_ID"" BIGINT DEFAULT NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"" NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"")"; SQL statement:
+INSERT INTO "PUBLIC"."BOOKS_AUTHORS"("BA_ID","AUTHOR_ID","BOOK_ID")VALUES(?,?,?) [22018-200]
+2024-06-10 16:11:32 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BOOKS_AUTHORS: ""BA_ID"" BIGINT DEFAULT NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"" NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"")"; SQL statement:
+INSERT INTO "PUBLIC"."BOOKS_AUTHORS"("BA_ID","AUTHOR_ID","BOOK_ID")VALUES(?,?,?) [22018-200]
+2024-06-10 16:11:52 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM  BOOK BOOKS_AUTHORS AUTHOR[*]"; SQL statement:
+SELECT * FROM  BOOK BOOKS_AUTHORS AUTHOR [42000-200]
+2024-06-10 16:12:07 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BOOKS_AUTHORS: ""BA_ID"" BIGINT DEFAULT NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"" NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"")"; SQL statement:
+INSERT INTO "PUBLIC"."BOOKS_AUTHORS"("BA_ID","AUTHOR_ID","BOOK_ID")VALUES(?,?,?) [22018-200]
+2024-06-10 16:12:07 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BOOKS_AUTHORS: ""BA_ID"" BIGINT DEFAULT NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"" NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"")"; SQL statement:
+INSERT INTO "PUBLIC"."BOOKS_AUTHORS"("BA_ID","AUTHOR_ID","BOOK_ID")VALUES(?,?,?) [22018-200]
+2024-06-10 16:15:25 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BOOKS_AUTHORS: ""BA_ID"" BIGINT DEFAULT NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"" NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"")"; SQL statement:
+INSERT INTO "PUBLIC"."BOOKS_AUTHORS"("BA_ID","AUTHOR_ID","BOOK_ID")VALUES(?,?,?) [22018-200]
+2024-06-10 16:15:25 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BOOKS_AUTHORS: ""BA_ID"" BIGINT DEFAULT NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"" NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_DCF9E0CC_6746_4354_AC7A_30244CDEB71C"")"; SQL statement:
+INSERT INTO "PUBLIC"."BOOKS_AUTHORS"("BA_ID","AUTHOR_ID","BOOK_ID")VALUES(?,?,?) [22018-200]
+2024-06-20 16:21:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('\u0643\u0627\u0646 \u064a\u0627\u0645\u0627 \u0643\u0627\u0646 \u0641\u064a \u0642\u062f\u064a\u0645 \u0627\u0644\... (623)"; SQL statement:
+insert into book (book_id, categories, description, edition, imageurl, publishing_date, subtitle, title) values (default, ?, ?, ?, ?, ?, ?, ?) [22001-200]
+2024-06-20 16:21:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('\u0643\u0627\u0646 \u064a\u0627\u0645\u0627 \u0643\u0627\u0646 \u0641\u064a \u0642\u062f\u064a\u0645 \u0627\u0644\... (623)"; SQL statement:
+insert into book (book_id, categories, description, edition, imageurl, publishing_date, subtitle, title) values (default, ?, ?, ?, ?, ?, ?, ?) [22001-200]
+2024-06-20 16:21:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('\u0643\u0627\u0646 \u064a\u0627\u0645\u0627 \u0643\u0627\u0646 \u0641\u064a \u0642\u062f\u064a\u0645 \u0627\u0644\... (623)"; SQL statement:
+insert into book (book_id, categories, description, edition, imageurl, publishing_date, subtitle, title) values (default, ?, ?, ?, ?, ?, ?, ?) [22001-200]
+2024-06-20 16:21:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('\u0643\u0627\u0646 \u064a\u0627\u0645\u0627 \u0643\u0627\u0646 \u0641\u064a \u0642\u062f\u064a\u0645 \u0627\u0644\... (623)"; SQL statement:
+insert into book (book_id, categories, description, edition, imageurl, publishing_date, subtitle, title) values (default, ?, ?, ?, ?, ?, ?, ?) [22001-200]
+2024-06-20 16:22:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('\u0643\u0627\u0646 \u064a\u0627\u0645\u0627 \u0643\u0627\u0646 \u0641\u064a \u0642\u062f\u064a\u0645 \u0627\u0644\... (623)"; SQL statement:
+insert into book (book_id, categories, description, edition, imageurl, publishing_date, subtitle, title) values (default, ?, ?, ?, ?, ?, ?, ?) [22001-200]
+2024-06-20 16:22:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('\u0643\u0627\u0646 \u064a\u0627\u0645\u0627 \u0643\u0627\u0646 \u0641\u064a \u0642\u062f\u064a\u0645 \u0627\u0644\... (623)"; SQL statement:
+insert into book (book_id, categories, description, edition, imageurl, publishing_date, subtitle, title) values (default, ?, ?, ?, ?, ?, ?, ?) [22001-200]
+2024-06-20 16:34:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('This novel is a multi-generational saga that focuses on the Buend\u00eda family, who founded the fictional town of... (510)"; SQL statement:
+insert into book (book_id, categories, description, edition, imageurl, publishing_date, subtitle, title) values (default, ?, ?, ?, ?, ?, ?, ?) [22001-200]
+2024-06-20 16:35:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('This novel is a multi-generational saga that focuses on the Buend\u00eda family, who founded the fictional town of... (378)"; SQL statement:
+insert into book (book_id, categories, description, edition, imageurl, publishing_date, subtitle, title) values (default, ?, ?, ?, ?, ?, ?, ?) [22001-200]
+2024-07-04 10:38:05 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM BOOKS_AUTHORS SHOP  ""flyway_schema_history""[*]"; SQL statement:
+SELECT * FROM BOOKS_AUTHORS SHOP  "flyway_schema_history" [42000-200]
